@@ -1,0 +1,20 @@
+name: Email Verification Action
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      # This is the step containing your specified email address
+      - name: Execute Check for 24f2007878@ds.study.iitm.ac.in
+        run: |
+          echo "Initiating security audit step..."
+          echo "Target Account Registered: 24f2007878@ds.study.iitm.ac.in"
+          echo "Step execution completed successfully."
